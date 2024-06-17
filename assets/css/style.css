@@ -9,9 +9,6 @@
     --text-color-second: rgb(68, 68, 68);
     --text-color-third: rgb(30, 159, 171);
 
-    /* --first-color: rgb(110, 87, 224);
-    --first-color-hover: rgb(40, 91, 212); */
-
     --first-color: rgb(44, 103, 241);
     --first-color-hover: rgb(47, 16, 221);
 
@@ -413,54 +410,49 @@ h3 {
     flex-wrap: wrap;
 }
 
+.project-link {
+    width: 30%;
+    text-decoration: none;
+    /* Hapus garis bawah dari tautan */
+}
+
 .project-box {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 30%;
+    width: 100%;
+    /* Sesuaikan dengan lebar container link */
     height: 250px;
     background: var(--color-white);
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-box>i {
-    font-size: 50px;
-    color: #00B5E7;
-    margin-bottom: 25px;
-}
-
-.project-box label {
-    font-size: 15px;
-    color: #777;
-}
-
-.project-box::after,
-.contact-info::after {
-    content: "";
-    position: absolute;
-    bottom: -100%;
-    background: var(--second-color);
+.project-box img {
     width: 100%;
     height: 100%;
-    transition: .4s;
-    z-index: 1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.project-box:hover.project-box::after,
-.contact-info:hover.contact-info::after {
-    bottom: 0;
+.project-box:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 10px 15px 3px var(--first-shadow-color);
 }
 
-.project-box:hover.project-box i,
-.project-box:hover.project-box>h3,
-.project-box:hover.project-box>label {
-    color: var(--color-white);
-    z-index: 2;
+.project-box:hover img {
+    transform: scale(1.1);
 }
+
+
+
 
 /* ----- CONTACT BOX ----- */
 .contact-info {
