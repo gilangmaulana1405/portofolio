@@ -413,7 +413,6 @@ h3 {
 .project-link {
     width: 30%;
     text-decoration: none;
-    /* Hapus garis bawah dari tautan */
 }
 
 .project-box {
@@ -423,7 +422,6 @@ h3 {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    /* Sesuaikan dengan lebar container link */
     height: 250px;
     background: var(--color-white);
     border-radius: 20px;
@@ -450,7 +448,6 @@ h3 {
 .project-box:hover img {
     transform: scale(1.1);
 }
-
 
 
 /* ----- CONTACT BOX ----- */
